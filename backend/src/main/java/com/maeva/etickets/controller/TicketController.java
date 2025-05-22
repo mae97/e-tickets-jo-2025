@@ -55,7 +55,7 @@ public class TicketController {
         return ticketRepository.findByClientRef(email); 
     }
 
-    // Tous les tickets pour l’admin
+    // Tous les tickets pour l’administrateur
     @GetMapping("/all")
     public List<TicketAdminDTO> getAllTickets() {
         return ticketRepository.findAll()
