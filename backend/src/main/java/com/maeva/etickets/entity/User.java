@@ -25,7 +25,7 @@ public class User {
     private boolean admin = false;
 
     public User() {
-        this.clientRef = UUID.randomUUID().toString(); // anciennement userKey
+        this.clientRef = UUID.randomUUID().toString(); 
     }
 
     public Long getId() { return id; }
