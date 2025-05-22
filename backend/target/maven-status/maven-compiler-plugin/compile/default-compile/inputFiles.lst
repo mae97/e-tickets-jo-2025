@@ -1,0 +1,16 @@
+/home/maeva_g/htdocs/node971/backend/src/main/java/com/maeva/etickets/entity/Offer.java
+/home/maeva_g/htdocs/node971/backend/src/main/java/com/maeva/etickets/controller/UserController.java
+/home/maeva_g/htdocs/node971/backend/src/main/java/com/maeva/etickets/config/CorsConfig.java
+/home/maeva_g/htdocs/node971/backend/src/main/java/com/maeva/etickets/config/WebSecurityConfig.java
+/home/maeva_g/htdocs/node971/backend/src/main/java/com/maeva/etickets/entity/User.java
+/home/maeva_g/htdocs/node971/backend/src/main/java/com/maeva/etickets/dto/TicketAdminDTO.java
+/home/maeva_g/htdocs/node971/backend/src/main/java/com/maeva/etickets/entity/Ticket.java
+/home/maeva_g/htdocs/node971/backend/src/main/java/com/maeva/etickets/config/SecurityConfig.java
+/home/maeva_g/htdocs/node971/backend/src/main/java/com/maeva/etickets/controller/TicketController.java
+/home/maeva_g/htdocs/node971/backend/src/main/java/com/maeva/etickets/dto/TicketForm.java
+/home/maeva_g/htdocs/node971/backend/src/main/java/com/maeva/etickets/dto/UserForm.java
+/home/maeva_g/htdocs/node971/backend/src/main/java/com/maeva/etickets/repository/UserRepository.java
+/home/maeva_g/htdocs/node971/backend/src/main/java/com/maeva/etickets/repository/OfferRepository.java
+/home/maeva_g/htdocs/node971/backend/src/main/java/com/maeva/etickets/repository/TicketRepository.java
+/home/maeva_g/htdocs/node971/backend/src/main/java/com/maeva/etickets/controller/OfferController.java
+/home/maeva_g/htdocs/node971/backend/src/main/java/com/maeva/etickets/DemoApplication.java
