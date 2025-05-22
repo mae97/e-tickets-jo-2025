@@ -15,20 +15,20 @@ public class OfferController {
     @Autowired
     private OfferRepository offerRepository;
 
-    //  Lire toutes les offres
+    //  Lire toute les offre
     @GetMapping
     public List<Offer> getAllOffers() {
         return offerRepository.findAll();
     }
 
-    //  Ajouter une nouvelle offre
+    //  Ajouté une nouvelle offre
     @PostMapping
     public ResponseEntity<String> createOffer(@RequestBody Offer offer) {
         offerRepository.save(offer);
         return ResponseEntity.ok("Offre créée !");
     }
 
-    //  Modifier une offre existante
+    //  Modifier une offre 
     @PutMapping("/{id}")
     public ResponseEntity<String> updateOffer(@PathVariable Long id, @RequestBody Offer updated) {
         return offerRepository.findById(id).map(offer -> {
