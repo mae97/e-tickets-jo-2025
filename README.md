@@ -9,7 +9,7 @@
 
 # Fonctionnalités principales
    Inscription - Connexion utilisateur
-   Affichage des offres de billets
+   Affichage des offre de billet
    Achat - panier - validation
    QR code pour les billets
    Espace administration (CRUD utilisateurs + tickets)
