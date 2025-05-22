@@ -1,6 +1,6 @@
 # Projet e-Tickets JO 2025 
 
-Site de réservation de billets électroniques pour les Jeux Olympiques 2025.
+Site de réservation de billets électronique pour les Jeux Olympiques 2025.
 
 # Technologies utilisées
 -  ReactJS (Frontend)
@@ -8,9 +8,9 @@ Site de réservation de billets électroniques pour les Jeux Olympiques 2025.
 -  Déploiement en HTTPS via Nginx sur serveur CloudPanel (Hostinger)
 
 # Fonctionnalités principales
-- Inscription / Connexion utilisateur
+- Inscription - Connexion utilisateur
 - Affichage des offres de billets
-- Achat / panier / validation
+- Achat - panier - validation
 - QR code pour les billets
 - Espace administration (CRUD utilisateurs + tickets)
 
