@@ -3,7 +3,7 @@ import axios from '../../axios';
 import { Navigate } from 'react-router-dom';
 
 export default function TicketsManagement() {
-  const [tickets, setTickets] = useState([]);
+   const [tickets, setTickets] = useState([]);
 
   useEffect(() => {
     fetchTickets();
@@ -12,7 +12,7 @@ export default function TicketsManagement() {
   const fetchTickets = async () => {
     try {
       const res = await axios.get("/tickets/all");
-      console.log("Tickets reçus:", res.data);
+        console.log("Tickets reçus:", res.data);
       setTickets(res.data);
     } catch (err) {
       console.error("Erreur chargement tickets", err);
@@ -22,10 +22,10 @@ export default function TicketsManagement() {
   const handleDelete = async (id) => {
     if (!window.confirm("Confirmer la suppression de ce ticket ?")) return;
     try {
-      await axios.delete(`/tickets/${id}`);
+        await axios.delete(`/tickets/${id}`);
       fetchTickets();
     } catch (err) {
-      console.error("Erreur suppression ticket :", err);
+        console.error("Erreur suppression ticket :", err);
       alert("Erreur lors de la suppression.");
     }
   };
@@ -36,7 +36,7 @@ export default function TicketsManagement() {
 
   return (
     <div className="container mt-4">
-      <h2>Tickets achetés</h2>
+        <h2>Tickets achetés</h2>
       {tickets.length === 0 ? (
         <p>Aucun ticket enregistré.</p>
       ) : (
@@ -46,7 +46,7 @@ export default function TicketsManagement() {
               <th>ID</th>
               <th>Email acheteur</th>
               <th>Clé d'achat</th>
-              <th>QR Code</th>
+                <th>QR Code</th>
               <th>Actions</th>
             </tr>
           </thead>
@@ -56,7 +56,7 @@ export default function TicketsManagement() {
                 <td>{ticket.id}</td>
                 <td>{ticket.clientRef}</td>
                 <td>{ticket.purchaseKey}</td>
-                <td>{ticket.qrCode}</td>
+                   <td>{ticket.qrCode}</td>
                 <td>
                   <button
                     className="btn btn-sm btn-danger"
@@ -65,10 +65,10 @@ export default function TicketsManagement() {
                     Supprimer
                   </button>
                 </td>
-              </tr>
+                </tr>
             ))}
           </tbody>
-        </table>
+         </table>
       )}
     </div>
   );
