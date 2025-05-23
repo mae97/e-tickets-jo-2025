@@ -19,3 +19,14 @@
 
 #  Dépôt GitHub
    [https://github.com/mae97/e-tickets-jo-2025](https://github.com/mae97/e-tickets-jo-2025)
+
+# Comptes de démonstration
+
+ Compte admin : 
+    Email : admin@email.com  
+    Mot de passe : 5555
+
+ Compte utilisateur :
+    Email : daniel@gmail.com  
+    Mot de passe : 1234
+
