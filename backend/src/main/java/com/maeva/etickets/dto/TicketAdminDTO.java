@@ -13,8 +13,8 @@ public class TicketAdminDTO {
         this.qrCode = qrCode;
     }
 
-    public Long getId() { return id; }
-    public String getClientRef() { return clientRef; }
-    public String getPurchaseKey() { return purchaseKey; }
-    public String getQrCode() { return qrCode; }
+        public Long getId() { return id; }
+        public String getClientRef() { return clientRef; }
+        public String getPurchaseKey() { return purchaseKey; }
+        public String getQrCode() { return qrCode; }
 }
