@@ -4,10 +4,10 @@ public class UserForm {
     private String firstName;
     private String lastName;
     private String email;
-    private String password;
-    private boolean admin;
+     private String password;
+      private boolean admin;
 
-    // Getters et Setters
+    // Get et Set
     public String getFirstName() {
         return firstName;
     }
@@ -32,7 +32,7 @@ public class UserForm {
     public String getPassword() {
         return password;
     }
-    public void setPassword(String password) {
+      public void setPassword(String password) {
         this.password = password;
     }
 
@@ -40,6 +40,6 @@ public class UserForm {
         return admin;
     }
     public void setAdmin(boolean admin) {
-        this.admin = admin;
+          this.admin = admin;
     }
 }
