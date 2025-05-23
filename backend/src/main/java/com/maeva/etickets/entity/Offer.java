@@ -17,17 +17,16 @@ public class Offer {
     private double price;
     private String image;
 
-    // Getters et Setters
     public Long getId() { return id; }
 
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }
 
     public int getQuantity() { return quantity; }
-    public void setQuantity(int quantity) { this.quantity = quantity; }
+     public void setQuantity(int quantity) { this.quantity = quantity; }
 
     public double getPrice() { return price; }
-    public void setPrice(double price) { this.price = price; }
+     public void setPrice(double price) { this.price = price; }
 
     public String getImage() { return image; }
     public void setImage(String image) { this.image = image; }
