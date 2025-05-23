@@ -15,7 +15,7 @@ public class Ticket {
 
     public Ticket() {}
 
-    // Getters et Setters
+    // Get et Set
 
     public Long getId() {
         return id;
