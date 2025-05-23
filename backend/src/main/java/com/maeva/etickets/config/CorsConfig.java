@@ -12,11 +12,11 @@ public class CorsConfig {
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {
             @Override
-            public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/api/**")
+              public void addCorsMappings(CorsRegistry registry) {
+             registry.addMapping("/api/**")
                     .allowedOriginPatterns("https://node971.guaydev.com")
                     .allowedMethods("GET", "POST", "PUT", "DELETE")
-                    .allowCredentials(true);
+                     .allowCredentials(true);
             }
         };
     }
