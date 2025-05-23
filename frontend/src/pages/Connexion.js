@@ -4,8 +4,8 @@ import axios from '../axios'; // axios configuré avec baseURL = '/api'
 
 export default function ConnexionUtilisateur() {
   const [identifiants, setIdentifiants] = useState({ email: '', password: '' });
-  const [messageServeur, setMessageServeur] = useState('');
-  const [chargement, setChargement] = useState(false);
+   const [messageServeur, setMessageServeur] = useState('');
+     const [chargement, setChargement] = useState(false);
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -21,7 +21,7 @@ export default function ConnexionUtilisateur() {
 
       if (retour.data === 'admin') {
         localStorage.setItem('admin_logged', 'true');
-        navigate('/admin');
+          navigate('/admin');
       } else {
         localStorage.setItem('email', identifiants.email);
         navigate('/');
@@ -68,7 +68,7 @@ export default function ConnexionUtilisateur() {
 
           <button type="submit" className="btn btn-primary w-100" disabled={chargement}>
             {chargement ? 'Connexion...' : 'Se connecter'}
-          </button>
+             </button>
         </form>
 
         {messageServeur && (
