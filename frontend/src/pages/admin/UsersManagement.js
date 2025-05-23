@@ -4,7 +4,7 @@ import { Navigate } from 'react-router-dom';
 
 export default function UsersManagement() {
   const [users, setUsers] = useState([]);
-  const [form, setForm] = useState({
+    const [form, setForm] = useState({
     firstName: '',
     lastName: '',
     email: '',
@@ -27,7 +27,7 @@ export default function UsersManagement() {
   };
 
   const handleDelete = async (id) => {
-    if (!window.confirm("Confirmer la suppression ?")) return;
+      if (!window.confirm("Confirmer la suppression ?")) return;
     try {
       await axios.delete(`/users/${id}`);
       fetchUsers();
@@ -41,14 +41,14 @@ export default function UsersManagement() {
     setForm({ ...form, [name]: type === "checkbox" ? checked : value });
   };
 
-  const handleSubmit = async (e) => {
+    const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
       if (editId) {
         await axios.put(`/users/${editId}`, form);
       } else {
-        await axios.post("/users/register", form);
+          await axios.post("/users/register", form);
       }
 
       fetchUsers();
@@ -64,7 +64,7 @@ export default function UsersManagement() {
       firstName: user.firstName,
       lastName: user.lastName,
       email: user.email,
-      password: '', // Ne pas préremplir le mot de passe
+       password: '', 
       admin: user.admin,
     });
     setEditId(user.id);
@@ -89,7 +89,7 @@ export default function UsersManagement() {
     <div className="container mt-4">
       <h2> Gestion des Utilisateurs</h2>
 
-      {/* Formulaire Ajout / Modification */}
+      // Formulaire Ajout et Modification 
       <form onSubmit={handleSubmit} className="row g-3 mb-4">
         <div className="col-md-3">
           <input
