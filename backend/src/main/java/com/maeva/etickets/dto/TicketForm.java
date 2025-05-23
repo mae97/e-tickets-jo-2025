@@ -7,10 +7,10 @@ public class TicketForm {
     private List<String> offres;
 
     public String getEmail() {
-        return email;
+         return email;
     }
 
-    public void setEmail(String email) {
+     public void setEmail(String email) {
         this.email = email;
     }
 
@@ -18,7 +18,7 @@ public class TicketForm {
         return offres;
     }
 
-    public void setOffres(List<String> offres) {
+      public void setOffres(List<String> offres) {
         this.offres = offres;
     }
 }
