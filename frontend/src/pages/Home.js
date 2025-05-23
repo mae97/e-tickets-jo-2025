@@ -3,17 +3,17 @@ import { Link, useNavigate } from 'react-router-dom';
 
 export default function Home() {
   const [email, setEmail] = useState("");
-  const [showDetails, setShowDetails] = useState([false, false, false]);
+   const [showDetails, setShowDetails] = useState([false, false, false]);
   const navigate = useNavigate();
 
   useEffect(() => {
     const storedEmail = localStorage.getItem("email");
-    if (storedEmail) setEmail(storedEmail);
+      if (storedEmail) setEmail(storedEmail);
   }, []);
 
   const handleLogout = () => {
-    localStorage.removeItem("email");
-	localStorage.removeItem("admin_logged");
+     localStorage.removeItem("email");
+	  localStorage.removeItem("admin_logged");
     navigate("/login");
   };
 
@@ -43,7 +43,7 @@ export default function Home() {
     {
       titre: "Gymnastique",
       image: "/images/sport3.jpg",
-      description: "Nulla facilisi. Suspendisse potenti. Vivamus eget dignissim sem, nec dapibus neque. Aliquam erat volutpat."
+       description: "Nulla facilisi. Suspendisse potenti. Vivamus eget dignissim sem, nec dapibus neque. Aliquam erat volutpat."
     }
   ];
 
@@ -71,11 +71,11 @@ export default function Home() {
 
         <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
           <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Précédent</span>
+            <span className="visually-hidden">Précédent</span>
         </button>
         <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
           <span className="carousel-control-next-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Suivant</span>
+            <span className="visually-hidden">Suivant</span>
         </button>
       </div>
 
@@ -86,7 +86,7 @@ export default function Home() {
           {epreuves.map((epreuve, index) => (
             <div className="col-md-4" key={index}>
               <div className="card h-100 shadow-sm">
-                <img src={epreuve.image} className="card-img-top" alt={epreuve.titre} style={{ height: '200px', objectFit: 'cover' }} />
+                  <img src={epreuve.image} className="card-img-top" alt={epreuve.titre} style={{ height: '200px', objectFit: 'cover' }} />
                 <div className="card-body d-flex flex-column">
                   <h5 className="card-title">{epreuve.titre}</h5>
                   <button
