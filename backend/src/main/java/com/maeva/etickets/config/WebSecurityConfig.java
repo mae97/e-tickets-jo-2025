@@ -10,10 +10,10 @@ public class WebSecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        return http
+          return http
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/**").permitAll() // autoriser toutes les routes de ton API
+                        .requestMatchers("/api/**").permitAll() // autorise les routes d'api
                         .anyRequest().permitAll() // tout le reste aussi
                 )
                 .build();
