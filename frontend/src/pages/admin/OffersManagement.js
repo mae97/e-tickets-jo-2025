@@ -4,8 +4,8 @@ import { Navigate } from 'react-router-dom';
 
 export default function OffersManagement() {
   const [offers, setOffers] = useState([]);
-  const [newOffer, setNewOffer] = useState({ name: '', price: '', quantity: '', image: '' });
-  const [editMode, setEditMode] = useState(false);
+    const [newOffer, setNewOffer] = useState({ name: '', price: '', quantity: '', image: '' });
+    const [editMode, setEditMode] = useState(false);
   const [editId, setEditId] = useState(null);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ export default function OffersManagement() {
     setNewOffer({ ...newOffer, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+    const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       if (editMode) {
@@ -57,9 +57,9 @@ export default function OffersManagement() {
   const handleEdit = (offer) => {
     setNewOffer({
       name: offer.name,
-      price: offer.price,
+       price: offer.price,
       quantity: offer.quantity,
-      image: offer.image
+       image: offer.image
     });
     setEditMode(true);
     setEditId(offer.id);
@@ -67,7 +67,7 @@ export default function OffersManagement() {
 
   const cancelEdit = () => {
     setEditMode(false);
-    setEditId(null);
+     setEditId(null);
     setNewOffer({ name: '', price: '', quantity: '', image: '' });
   };
 
@@ -86,7 +86,7 @@ export default function OffersManagement() {
         <div className="col-md-2">
           <input type="number" name="price" className="form-control" placeholder="Prix (€)" required value={newOffer.price} onChange={handleChange} />
         </div>
-        <div className="col-md-2">
+          <div className="col-md-2">
           <input type="number" name="quantity" className="form-control" placeholder="Quantité" required value={newOffer.quantity} onChange={handleChange} />
         </div>
         <div className="col-md-3">
@@ -103,7 +103,7 @@ export default function OffersManagement() {
       </form>
 
       <table className="table table-striped">
-        <thead>
+         <thead>
           <tr>
             <th>ID</th>
             <th>Nom</th>
@@ -113,7 +113,7 @@ export default function OffersManagement() {
             <th>Actions</th>
           </tr>
         </thead>
-        <tbody>
+         <tbody>
           {offers.map((offer) => (
             <tr key={offer.id}>
               <td>{offer.id}</td>
@@ -121,7 +121,7 @@ export default function OffersManagement() {
               <td>{offer.price} €</td>
               <td>{offer.quantity}</td>
               <td><img src={offer.image} alt={offer.name} width="60" /></td>
-              <td className="d-flex gap-2">
+               <td className="d-flex gap-2">
                 <button className="btn btn-sm btn-primary" onClick={() => handleEdit(offer)}>Modifier</button>
                 <button className="btn btn-sm btn-danger" onClick={() => handleDelete(offer.id)}>Supprimer</button>
               </td>
