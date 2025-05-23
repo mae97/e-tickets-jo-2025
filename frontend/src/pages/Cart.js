@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from '../axios'; // axios avec baseURL '/api'
+import axios from '../axios'; 
 
 export default function Cart() {
-  const [cart, setCart] = useState([]);
+    const [cart, setCart] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -41,7 +41,7 @@ export default function Cart() {
         offres: titres
       });
 
-      alert(res.data); // "Tickets enregistrés !"
+      alert(res.data); // "Ticket enregistrés !"
       clearCart();
       navigate("/mes-tickets");
     } catch (err) {
@@ -62,7 +62,7 @@ export default function Cart() {
             {cart.map((item, index) => (
               <li className="list-group-item d-flex justify-content-between align-items-center" key={index}>
                 <div>
-                  <strong>{item.titre || item.name}</strong><br />
+                    <strong>{item.titre || item.name}</strong><br />
                   <small>{item.description}</small>
                 </div>
                 <span className="badge bg-success">
@@ -75,7 +75,7 @@ export default function Cart() {
           <h5>Total : {total.toFixed(2)}€</h5>
 
           <div className="d-flex gap-3 mt-3">
-            <button className="btn btn-danger" onClick={clearCart}>
+               <button className="btn btn-danger" onClick={clearCart}>
               Vider le panier
             </button>
 
