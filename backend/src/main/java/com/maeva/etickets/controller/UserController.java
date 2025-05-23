@@ -1,5 +1,7 @@
 package com.maeva.etickets.controller;
 
+// importation de tout les élément nécéssaire
+
 import com.maeva.etickets.dto.UserForm;
 import com.maeva.etickets.entity.User;
 import com.maeva.etickets.repository.UserRepository;
@@ -9,7 +11,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.UUID;
+  import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/users")
@@ -33,7 +35,7 @@ public class UserController {
         user.setLastName(form.getLastName());
         user.setEmail(form.getEmail());
         user.setPassword(passwordEncoder.encode(form.getPassword()));
-        user.setClientRef(UUID.randomUUID().toString()); // ici on utilise clientRef
+         user.setClientRef(UUID.randomUUID().toString()); // ici on utilise clientRef
         user.setAdmin(false);
 
         userRepository.save(user);
@@ -46,7 +48,7 @@ public class UserController {
     public ResponseEntity<String> login(@RequestBody UserForm form) {
         return userRepository.findByEmail(form.getEmail())
                 .map(user -> {
-                    if (passwordEncoder.matches(form.getPassword(), user.getPassword())) {
+                            if (passwordEncoder.matches(form.getPassword(), user.getPassword())) {
                         return ResponseEntity.ok(user.isAdmin() ? "admin" : "user");
                     } else {
                         return ResponseEntity.badRequest().body("Mot de passe incorrect.");
@@ -56,12 +58,13 @@ public class UserController {
     }
 
     // Liste des utilisateurs
+    
     @GetMapping("/all")
     public List<User> getAllUsers() {
         return userRepository.findAll();
     }
 
-    // Suppression d'un utilisateur
+    // Suppression d'un   utilisateur
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteUser(@PathVariable Long id) {
         userRepository.deleteById(id);
@@ -73,10 +76,10 @@ public class UserController {
     public ResponseEntity<String> updateUser(@PathVariable Long id, @RequestBody UserForm form) {
         return userRepository.findById(id).map(user -> {
             user.setFirstName(form.getFirstName());
-            user.setLastName(form.getLastName());
+                user.setLastName(form.getLastName());
             user.setAdmin(form.isAdmin());
 
-            if (form.getPassword() != null && !form.getPassword().isBlank()) {
+                  if (form.getPassword() != null && !form.getPassword().isBlank()) {
                 user.setPassword(passwordEncoder.encode(form.getPassword()));
             }
 
