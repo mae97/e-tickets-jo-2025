@@ -3,6 +3,7 @@ package com.maeva.etickets.entity;
 import jakarta.persistence.*;
 import java.util.UUID;
 
+// Table utilisateur
 @Entity
 @Table(name = "app_user")
 public class User {
